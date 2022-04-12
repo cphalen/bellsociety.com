@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% assign member = page %}
+{% assign size = 'large' %}
+
+{% include profile.html %}
+<br>
+<hr>
+<br>
+<div class="member_content">
+  {{ content}}
+</div>
+
+
+{% comment %}<!--
+<hr>
+{{ content}}
+-->{% endcomment %}

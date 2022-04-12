@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<h1 class="cover-heading">
+  Bell {{ page.year }} Members
+</h1>
+<br>
+<div class="row">
+  {% for member in site.members %}
+
+    {% if member.year == page.year and member.layout == 'member_page' %}
+
+      {% cycle '</div><hr class="hidden-xs hidden-sm"><div class="row">', '', '', '' %}
+
+      <div class="col-sm-6 col-md-3">{{ i }}
+        {% assign size = 'small' %}
+        {% include profile.html %}
+      </div>
+
+    {% endif %}
+  {% endfor %}
+</div>

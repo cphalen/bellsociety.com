@@ -1,0 +1,22 @@
+<div class="inner container">
+  <h3 class="masthead-brand">
+    <a href="/">
+      <img
+        src="/images/bell-logo-white.svg"
+        style="width:180px;"
+        alt="Bell Senior Society">
+      </a>
+  </h3>
+  <ul class="nav masthead-nav">
+    <!-- Ugly hack, apparently due to Jekyll 3. Hopefully fixed one day. -->
+    {% assign years = site.collections[0].years %}
+    {% for year in years %}
+      <li>
+        <a href="/members/{{ year }}">{{ year }}</a>
+      </li>
+    {% endfor %}
+    <li>
+      <a href="/members/{{ site.current_year }}/board.html">Current Board</a>
+    </li>
+  </ul>
+</div>
